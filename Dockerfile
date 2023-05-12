@@ -6,7 +6,7 @@ LABEL maintainer="Cobra1978"
 RUN \
   echo "**** install packages ****" && \
   #pacman -Syu --noconfirm && \
-  pacman -S gnucash mariadb-libs libdbi-drivers postgresql-libs --noconfirm && \
+  pacman -Sy gnucash mariadb-libs libdbi-drivers postgresql-libs --noconfirm && \
   echo "**** cleanup ****" && \
   pacman -Scc --noconfirm
 
