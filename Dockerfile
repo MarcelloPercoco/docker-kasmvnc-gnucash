@@ -1,17 +1,20 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:arch
 
 # set version label
-LABEL maintainer="Cobra1978"
+LABEL maintainer="Cobra19i78"
 
-RUN \
-  echo "**** install packages ****" && \
-  #pacman -Syu --noconfirm && \
-  pacman -Sy gnucash mariadb-libs libdbi-drivers postgresql-libs --noconfirm && \
-  echo "**** cleanup ****" && \
-  pacman -Scc --noconfirm
+# copy nginx configuration
+RUN cp /defaults/default.conf /etc/nginx/conf.d/
 
 # add local files
 COPY /root /
+
+RUN \
+  echo "**** install packages ****" && \
+  pacman -Syu --noconfirm && \
+  pacman -Sy gnucash mariadb-libs libdbi-drivers postgresql-libs --noconfirm && \
+  echo "**** cleanup ****" && \
+  pacman -Scc --noconfirm
 
 # ports and volumes
 EXPOSE 3000
