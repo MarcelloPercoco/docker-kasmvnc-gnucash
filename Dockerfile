@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-rdesktop-web:arch
+FROM ghcr.io/linuxserver/linuxserver/baseimage-kasmvnc:arch
 
 # set version label
 LABEL maintainer="Cobra1978"
