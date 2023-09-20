@@ -1,2 +1,2 @@
-# docker-guacamole-gnucash
-Gnucash for Docker via Guacamole
+# docker-kasmvnc-gnucash
+Gnucash for Docker via Kasmvnc
