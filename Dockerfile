@@ -1,7 +1,7 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:arch
 
 # set version label
-LABEL maintainer="Cobra19i78"
+LABEL maintainer="Cobra1978"
 
 # copy nginx configuration
 RUN cp /defaults/default.conf /etc/nginx/conf.d/
