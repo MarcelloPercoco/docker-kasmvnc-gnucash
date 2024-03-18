@@ -7,7 +7,7 @@ LABEL maintainer="Cobra1978"
 RUN cp /defaults/default.conf /etc/nginx/conf.d/
 
 # add local files
-COPY /root /
+COPY /root/defaults /
 
 RUN \
   echo "**** install packages ****" && \
